@@ -1,0 +1,56 @@
+<!-- Write a js program to convert temperature to and from Celcius, Fahrenheit. 
+
+[Formula : c/5 = (f-32)/9]
+Output :
+60 C is 140 F
+45 F is 7.2222 C -->
+
+
+<html>
+    <head>
+        <style>
+            body {
+                background-color: black;
+                text-align: center;
+                color: rgb(247, 248, 250);
+            }
+        </style>
+
+    </head>
+    <body>
+        <h1>Temperature Conversion</h1>
+       
+        Enter a number : <input id = "num" type = "text"><br><br>
+        
+        <button 
+            onclick="fahrenheit()">Celcius</button>&nbsp;&nbsp;
+        
+        <button 
+            onclick="celcius()">Fahrenheit</button>
+        
+        <p id ="demo" ></p>
+        <p id ="demo1"></p>
+        
+<script>
+    function fahrenheit ()  {
+        let toCelci = document.getElementById("num").value
+        if (toCelci === '' || isNaN(toCelci))  {
+            document.getElementById("demo").innerHTML= "Please enter a number"
+            document.getElementById("demo").style.color="red"
+        }else  {
+            document.getElementById("demo").style.display="none"
+        document.getElementById("demo1").innerHTML=`The celcius is ${((toCelci-32)/9)*5}`
+    }}
+
+    function celcius()  {
+        toFahren = document.getElementById("num").value
+        if (toFahren === '' || isNaN(toFahren))  {
+            document.getElementById("demo").innerHTML= "Please enter a number"
+            document.getElementById("demo").style.color="red"
+        }else  {
+            document.getElementById("demo").style.display="none"
+        document.getElementById("demo1").innerHTML=`The fahrenheit is : ${((toFahren/5)*9)+32}`
+    }}
+</script>
+    </body>
+</html>

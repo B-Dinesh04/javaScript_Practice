@@ -1,0 +1,88 @@
+<!-- Write a js program to calculate multiplication and division of two numbers (input from the user)-->
+
+<html>
+    <head>
+    <style>
+        body {
+            background-color : rgb(195, 218, 227);
+            text-align: center;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-variant: normal;
+            font-size: 18px;
+        }
+
+        h1 {
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 25px;
+            font-weight: lighter;
+            text-shadow: 1px 2px 5px rgba(18, 18, 16, 0.951);
+           }
+
+    </style>
+       
+    </head>
+    <body>
+        <h1>ARITHMETIC OPERATION</h1>
+
+        1st numbers &nbsp;: <input id = "num1" type ="text"><br><br>
+        2nd numbers : <input id = "num2" type ="text"> <br>
+        <br>
+     
+        <button 
+           onclick="multiply()">Multiply</button>&nbsp;&nbsp;
+
+        <button 
+           onclick="division()">Division</button>  
+         
+           <p>The ans is : <span
+            id = "ans"> </span>
+           </p>     
+           <p id = "demo"></p>
+           
+    <script>
+        // multiple
+
+        function multiply()  {
+            let val1 = document.getElementById("num1").value
+        let val2 = document.getElementById("num2").value
+
+        if (val1 === '' || isNaN(val1) || val2 === '' || isNaN(val2))  {
+            
+            text()
+
+        }else  {
+            let ans = val1 * val2
+        document.getElementById("demo").style.display="none"    
+        document.getElementById("ans").innerHTML=ans
+        
+        }
+        }
+        
+       // divide
+
+        function division()  {
+            let val1 = document.getElementById("num1").value
+        let val2 = document.getElementById("num2").value
+        
+        if (val1 === '' || isNaN(val1) ||val2 === '' || isNaN(val2))  {
+            text()
+        
+        }else  {
+            let ans = val1 / val2
+        document.getElementById("demo").style.display="none"
+        document.getElementById("ans").innerHTML=ans
+        }
+        
+        }
+
+        function text()
+        {
+            document.getElementById("demo").innerHTML="Please enter a number"
+            document.getElementById("demo").style.color="red"
+        }
+
+    </script>
+    
+    </body>
+</html>

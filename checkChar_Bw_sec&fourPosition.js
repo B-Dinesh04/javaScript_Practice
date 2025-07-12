@@ -3,7 +3,7 @@
 function check(char, letter){
     let val
     for(let i = 0; i < char.length; i++){
-        if((char.at(i) == letter) && (i >= 2 && i <= 4)){
+        if(char.indexOf(letter) >= 2 && char.indexOf(letter) <= 4){
          val = true
          break
         }
@@ -12,4 +12,4 @@ function check(char, letter){
       return true
     return false
 }
-console.log(check('Hello','o'))
+console.log(check('Hello','H'))
